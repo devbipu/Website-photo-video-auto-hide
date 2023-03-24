@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "Facebook Photo Hide",
+  "version": "1.0",
+  "action": {
+    "default_icon": "./assets/images/icon128.png",
+    "default_popup": "./popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.facebook.com/*"],
+      "js": ["script.js"]
+    }
+  ],
+  "permissions": [
+     "webRequest",
+      "scripting",
+      "activeTab",
+      "clipboardRead",
+      "clipboardWrite",
+      "tabs"
+  ]
+}
